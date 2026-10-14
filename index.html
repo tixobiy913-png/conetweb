@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr Carvalho | Importadora de Móveis e Objetos de Arte - Jacareí/SP</title>
+    <meta name="description" content="Mr Carvalho Importadora de Móveis LTDA - Móveis, decoração e objetos de arte importados em Jacareí/SP. Transforme seu ambiente com design e sofisticação. Solicite orçamento.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.mrcarvalho.com.br/">
+
+    <meta property="og:title" content="Mr Carvalho | Importadora de Móveis e Objetos de Arte">
+    <meta property="og:description" content="Móveis e objetos de arte importados com qualidade e sofisticação em Jacareí/SP.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #1B3A2F; background: #FFFFFF; overflow-x: hidden; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+        h1, h2, h3, .brand { font-family: 'Playfair Display', serif; }
+        h1 { font-size: 3rem; font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; }
+        h2 { font-size: 2.2rem; font-weight: 600; margin-bottom: 1rem; }
+        h3 { font-size: 1.4rem; font-weight: 600; margin-bottom: 0.8rem; }
+        p { font-size: 1rem; }
+        a { color: #B8860B; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            .container { padding: 0 1.25rem; }
+        }
+
+        .btn { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.95rem 1.8rem; border-radius: 50px; font-weight: 600; font-size: 0.9rem; border: none; cursor: pointer; transition: all 0.3s ease; }
+        .btn-primary { background: linear-gradient(135deg, #B8860B, #8B6508); color: #fff; box-shadow: 0 4px 15px rgba(184,134,11,0.3); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(184,134,11,0.4); text-decoration: none; }
+        .btn-outline { background: transparent; border: 2px solid #B8860B; color: #B8860B; }
+        .btn-outline:hover { background: #B8860B; color: #fff; text-decoration: none; }
+        .btn-lg { padding: 1.1rem 2.2rem; font-size: 1rem; }
+
+        .lgpd-bar { background: #0F241C; color: #D8CDB8; text-align: center; padding: 0.6rem 1rem; font-size: 0.8rem; }
+        .lgpd-bar strong { color: #E0B84C; }
+
+        .nav { position: sticky; top: 0; background: rgba(255,255,255,0.98); backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(0,0,0,0.05); z-index: 1000; padding: 1rem 0; }
+        .nav .container { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+        .brand { display: flex; align-items: center; gap: 0.6rem; font-size: 1.4rem; font-weight: 700; color: #1B3A2F; }
+        .brand i { color: #B8860B; }
+        .nav-links { display: flex; gap: 1.8rem; list-style: none; }
+        .nav-links a { color: #4A4A4A; font-weight: 500; font-size: 0.9rem; text-decoration: none; }
+        .nav-links a:hover { color: #B8860B; }
+        .nav-cta { display: inline-flex; }
+        .menu-btn { display: none; background: none; border: none; font-size: 1.4rem; color: #1B3A2F; cursor: pointer; }
+
+        @media (max-width: 900px) {
+            .nav-links { display: none; width: 100%; flex-direction: column; gap: 0; order: 3; padding-top: 1rem; border-top: 1px solid #eee; }
+            .nav-links.open { display: flex; }
+            .nav-links a { padding: 0.8rem 0; }
+            .menu-btn { display: block; }
+            .nav-cta { display: none; }
+        }
+
+        .hero { background: linear-gradient(135deg, #1B3A2F 0%, #2C5445 100%); color: #fff; padding: 5rem 0; position: relative; overflow: hidden; }
+        .hero .container { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; position: relative; z-index: 2; }
+        .hero-badge { display: inline-block; background: rgba(255,255,255,0.15); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.8rem; margin-bottom: 1.2rem; border: 1px solid rgba(255,255,255,0.2); }
+        .hero h1 { color: #fff; }
+        .hero p { font-size: 1.1rem; opacity: 0.95; margin-bottom: 1.8rem; }
+        .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .hero-visual { background: rgba(255,255,255,0.08); border-radius: 1.5rem; padding: 2rem; text-align: center; border: 1px solid rgba(255,255,255,0.15); }
+        .hero-visual i { font-size: 6rem; color: #E0B84C; }
+
+        @media (max-width: 900px) {
+            .hero .container { grid-template-columns: 1fr; }
+            .hero-visual { display: none; }
+            .hero { padding: 3rem 0; }
+        }
+
+        section { padding: 4rem 0; }
+        .section-muted { background: #F5F0E6; }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 3rem; }
+        .subtitle { color: #B8860B; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.8rem; display: inline-block; }
+
+        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+
+        @media (max-width: 900px) {
+            .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+        }
+
+        .card { background: #fff; border-radius: 1rem; padding: 1.8rem; box-shadow: 0 4px 15px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.1); }
+        .card-icon { width: 60px; height: 60px; background: linear-gradient(135deg, #B8860B20, #E0B84C20); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; color: #B8860B; margin-bottom: 1rem; }
+        .card h3 { font-size: 1.1rem; }
+        .card p { font-size: 0.9rem; color: #4A6A58; }
+
+        .form-box { background: #fff; border-radius: 1.5rem; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08); }
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group label { display: block; font-size: 0.85rem; font-weight: 500; margin-bottom: 0.4rem; color: #1B3A2F; }
+        .form-group label .req { color: #C0392B; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.8rem 1rem; border: 1.5px solid #DDD0B8; border-radius: 0.6rem; font-family: inherit; font-size: 0.9rem; transition: border-color 0.3s; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #B8860B; }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+        .form-consent { display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.8rem; color: #4A4A4A; margin-bottom: 1.5rem; }
+        .form-consent input { width: auto; margin-top: 0.2rem; }
+        .form-note { font-size: 0.75rem; color: #6B7A70; margin-top: 0.8rem; text-align: center; }
+
+        .faq-item { background: #fff; border: 1px solid #DDD0B8; border-radius: 0.8rem; margin-bottom: 0.8rem; overflow: hidden; }
+        .faq-q { padding: 1.1rem 1.4rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 600; font-size: 0.95rem; }
+        .faq-q i { color: #B8860B; transition: transform 0.3s; }
+        .faq-item.active .faq-q i { transform: rotate(180deg); }
+        .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; padding: 0 1.4rem; color: #4A6A58; font-size: 0.9rem; }
+        .faq-item.active .faq-a { max-height: 400px; padding: 0 1.4rem 1.2rem; }
+
+        footer { background: #0F241C; color: #D8CDB8; padding: 3rem 0 1.5rem; font-size: 0.85rem; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 2fr; gap: 2rem; margin-bottom: 2.5rem; }
+        footer h4 { color: #fff; font-family: 'Playfair Display', serif; font-size: 1rem; margin-bottom: 1rem; }
+        footer ul { list-style: none; }
+        footer ul li { margin-bottom: 0.6rem; }
+        footer a { color: #D8CDB8; font-size: 0.85rem; }
+        footer a:hover { color: #B8860B; }
+        .footer-bottom { border-top: 1px solid #2C5445; padding-top: 1.5rem; text-align: center; font-size: 0.75rem; }
+
+        @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } }
+
+        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: #fff; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 999; transition: transform 0.3s; }
+        .whatsapp-float:hover { transform: scale(1.1); text-decoration: none; }
+
+        .cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: #0F241C; color: #D8CDB8; padding: 1.2rem; z-index: 1001; display: none; box-shadow: 0 -4px 20px rgba(0,0,0,0.15); }
+        .cookie-banner.show { display: block; }
+        .cookie-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; justify-content: space-between; }
+        .cookie-inner p { font-size: 0.85rem; margin: 0; flex: 1; min-width: 260px; }
+        .cookie-btns { display: flex; gap: 0.6rem; }
+        .cookie-btns button { padding: 0.6rem 1.2rem; border-radius: 50px; font-size: 0.8rem; cursor: pointer; border: none; font-weight: 600; }
+        .cookie-accept { background: #B8860B; color: #fff; }
+        .cookie-reject { background: transparent; color: #D8CDB8; border: 1px solid #D8CDB8 !important; }
+
+        .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 2000; padding: 2rem 1rem; overflow-y: auto; }
+        .modal.open { display: block; }
+        .modal-content { background: #fff; max-width: 700px; margin: 0 auto; border-radius: 1rem; padding: 2rem; position: relative; }
+        .modal-close { position: absolute; top: 1rem; right: 1rem; background: #eee; border: none; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 0.9rem; }
+        .modal-content h2 { color: #1B3A2F; font-size: 1.3rem; margin-bottom: 1rem; }
+        .modal-content h3 { font-size: 1rem; margin: 1.2rem 0 0.5rem; color: #1B3A2F; }
+        .modal-content p, .modal-content li { font-size: 0.85rem; color: #4A4A4A; margin-bottom: 0.6rem; }
+        .modal-content ul { padding-left: 1.2rem; }
+
+        .pending { background: #FFF3CD; border-left: 4px solid #FFC107; padding: 0.8rem 1rem; border-radius: 0.4rem; font-size: 0.8rem; margin: 0.5rem 0; color: #856404; }
+    </style>
+</head>
+<body>
+
+<!-- Barra LGPD -->
+<div class="lgpd-bar">
+    <i class="fas fa-shield-alt"></i> Site oficial de <strong>Mr Carvalho Importadora de Moveis LTDA — CNPJ 60.773.962/0001-05</strong>. Não somos órgão governamental.
+</div>
+
+<!-- Navegação -->
+<nav class="nav">
+    <div class="container">
+        <a href="#top" class="brand">
+            <i class="fas fa-couch"></i> Mr Carvalho
+        </a>
+        <button class="menu-btn" id="menuBtn" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+        <a href="#contato" class="btn btn-primary nav-cta">Solicitar Orçamento</a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero" id="top">
+    <div class="container">
+        <div>
+            <span class="hero-badge"><i class="fas fa-map-marker-alt"></i> Jacareí/SP · Desde 2025</span>
+            <h1>Móveis e Objetos de Arte que Transformam Ambientes</h1>
+            <p>A Mr Carvalho Importadora traz para Jacareí e região móveis, decoração e objetos de arte importados, unindo sofisticação, qualidade e design exclusivo para sua casa ou empresa.</p>
+            <div class="hero-btns">
+                <a href="#contato" class="btn btn-primary btn-lg">Solicitar Orçamento</a>
+                <a href="#produtos" class="btn btn-outline btn-lg" style="color:#fff;border-color:#fff;">Ver Produtos</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <i class="fas fa-couch"></i>
+        </div>
+    </div>
+</header>
+
+<!-- Sobre -->
+<section id="sobre">
+    <div class="container">
+        <div class="section-header">
+            <span class="subtitle">Nossa História</span>
+            <h2>Sobre a Mr Carvalho</h2>
+        </div>
+        <div class="grid-2">
+            <div>
+                <h3 style="color:#B8860B;">Design e sofisticação desde 2025</h3>
+                <p style="margin-bottom:1rem;">A <strong>Mr Carvalho Importadora de Moveis LTDA</strong>, com <strong>CNPJ 60.773.962/0001-05</strong>, foi fundada em <strong>12 de maio de 2025</strong> na cidade de <strong>Jacareí - SP</strong>.</p>
+                <p style="margin-bottom:1rem;">Nossa atividade principal é o <strong>comércio varejista de objetos de arte</strong> (CNAE 47.89-0-03), além da importação e comercialização de móveis e artigos de decoração.</p>
+                <p>Trazemos para o mercado brasileiro peças selecionadas de fornecedores internacionais, combinando design contemporâneo, materiais de alta qualidade e acabamento impecável.</p>
+            </div>
+            <div class="card" style="background:linear-gradient(135deg,#F5F0E6,#EDE4D0);text-align:center;">
+                <i class="fas fa-gem" style="font-size:3rem;color:#B8860B;margin-bottom:1rem;"></i>
+                <p style="font-style:italic;">"Transformando ambientes com arte e sofisticação"</p>
+                <p style="margin-top:1rem;font-weight:600;">Mr Carvalho</p>
+                <p style="font-size:0.85rem;color:#4A6A58;">Desde 2025</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Produtos -->
+<section id="produtos" class="section-muted">
+    <div class="container">
+        <div class="section-header">
+            <span class="subtitle">Produtos</span>
+            <h2>Móveis e Decoração</h2>
+            <p>Peças selecionadas para transformar cada ambiente</p>
+        </div>
+        <div class="grid-4">
+            <div class="card"><div class="card-icon"><i class="fas fa-couch"></i></div><h3>Sofás e Poltronas</h3><p>Modelos importados com design contemporâneo e conforto superior.</p></div>
+            <div class="card"><div class="card-icon"><i class="fas fa-bed"></i></div><h3>Quartos e Camas</h3><p>Móveis para quarto que combinam elegância e funcionalidade.</p></div>
+            <div class="card"><div class="card-icon"><i class="fas fa-chair"></i></div><h3>Mesas e Cadeiras</h3><p>Peças para sala de jantar e escritório com acabamento premium.</p></div>
+            <div class="card"><div class="card-icon"><i class="fas fa-lamp"></i></div><h3>Iluminação e Decoração</h3><p>Lustres, luminárias e acessórios que valorizam seu ambiente.</p></div>
+            <div class="card"><div class="card-icon"><i class="fas fa-palette"></i></div><h3>Quadros e Pinturas</h3><p>Obras selecionadas para dar personalidade às suas paredes.</p></div>
+            <div class="card"><div class="card-icon"><i class="fas fa-gem"></i></div><h3>Esculturas</h3><p>Peças únicas esculpidas com materiais nobres e acabamento refinado.</p></div>
+            <div class="card"><div class="card-icon"><i class="fas fa-mask"></i></div><h3>Arte Decorativa</h3><p>Objetos de arte que se tornam o ponto focal do ambiente.</p></div>
+            <div class="card"><div class="card-icon"><i class="fas fa-vase"></i></div><h3>Vasos e Cerâmicas</h3><p>Peças artesanais e importadas para complementar a decoração.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- Serviços -->
+<section id="servicos">
+    <div class="container">
+        <div class="section-header">
+            <span class="subtitle">Serviços</span>
+            <h2>Mais que uma loja, um parceiro</h2>
+        </div>
+        <div class="grid-3">
+            <div class="card"><div class="card-icon"><i class="fas fa-truck"></i></div><h3>Entrega e Montagem</h3><p>Entregamos e montamos seus móveis com equipe especializada na região de Jacareí.</p></div>
+            <div class="card"><div class="card-icon"><i class="fas fa-ruler-combined"></i></div><h3>Consultoria de Ambientes</h3><p>Ajudamos você a escolher as peças ideais para cada espaço, do projeto à execução.</p></div>
+            <div class="card"><div class="card-icon"><i class="fas fa-paint-brush"></i></div><h3>Personalização</h3><p>Peças sob medida e personalizadas conforme o estilo e a necessidade do cliente.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section-muted">
+    <div class="container">
+        <div class="section-header">
+            <span class="subtitle">Dúvidas Frequentes</span>
+            <h2>Perguntas Frequentes</h2>
+        </div>
+        <div style="max-width:800px;margin:0 auto;">
+            <div class="faq-item">
+                <div class="faq-q">Vocês entregam em outras cidades? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">Entregamos em Jacareí e toda a região do Vale do Paraíba. Para outras localidades, consulte condições e prazos pelo nosso WhatsApp (12) 3904-3950.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Os móveis são importados? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">Sim. Trabalhamos com fornecedores internacionais e peças importadas de marcas reconhecidas mundialmente em design e qualidade.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Vocês fazem projetos personalizados? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">Sim. Oferecemos consultoria de ambientes e personalização de peças conforme o estilo e a necessidade do cliente.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Como funciona a política de troca e reembolso? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">O cliente tem até 7 dias corridos após o recebimento para solicitar troca ou reembolso, conforme o Código de Defesa do Consumidor. Consulte nossa <a href="#" onclick="openModal('reembolso');return false;">Política de Troca e Reembolso</a>.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Vocês compartilham meus dados pessoais? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">Não. A Mr Carvalho não fornece, compartilha ou divulga dados pessoais de clientes ou terceiros. Respeitamos integralmente a LGPD.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Como faço para acompanhar meu pedido? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">Após a confirmação do pedido, você receberá um código de acompanhamento por e-mail ou WhatsApp.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contato -->
+<section id="contato">
+    <div class="container">
+        <div class="section-header">
+            <span class="subtitle">Fale Conosco</span>
+            <h2>Solicite seu Orçamento</h2>
+            <p>Preencha o formulário e nossa equipe entrará em contato</p>
+        </div>
+        <div class="grid-2">
+            <div class="form-box">
+                <h3>Formulário de Contato</h3>
+                <p style="font-size:0.85rem;color:#4A6A58;margin-bottom:1.5rem;">Campos marcados com <span style="color:#C0392B;">*</span> são obrigatórios.</p>
+                <form id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="nome">Nome completo <span class="req">*</span></label>
+                        <input type="text" id="nome" name="nome" required maxlength="100" autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail <span class="req">*</span></label>
+                        <input type="email" id="email" name="email" required maxlength="120" autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone / WhatsApp <span class="req">*</span></label>
+                        <input type="tel" id="telefone" name="telefone" required maxlength="20" autocomplete="tel" placeholder="(12) 99999-9999">
+                    </div>
+                    <div class="form-group">
+                        <label for="interesse">Interesse <span class="req">*</span></label>
+                        <select id="interesse" name="interesse" required>
+                            <option value="">Selecione...</option>
+                            <option value="moveis">Móveis</option>
+                            <option value="arte">Objetos de Arte</option>
+                            <option value="decoracao">Decoração</option>
+                            <option value="consultoria">Consultoria de Ambientes</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" maxlength="500" placeholder="Descreva o que você procura..."></textarea>
+                    </div>
+                    <div class="form-consent">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">Li e concordo com a <a href="#" onclick="openModal('privacidade');return false;">Política de Privacidade</a> e autorizo o contato para fins de atendimento comercial. <span class="req">*</span></label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">
+                        <i class="fas fa-paper-plane"></i> Enviar Solicitação
+                    </button>
+                    <p class="form-note"><i class="fas fa-lock"></i> Seus dados são tratados conforme a LGPD. Não compartilhamos com terceiros.</p>
+                </form>
+            </div>
+            <div>
+                <div class="card" style="margin-bottom:1rem;">
+                    <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Endereço</h3>
+                    <div class="pending">[PREENCHER: Rua, número, bairro]</div>
+                    <p>Jacareí / SP</p>
+                    <p>CEP: [PREENCHER]</p>
+                </div>
+                <div class="card" style="margin-bottom:1rem;">
+                    <div class="card-icon"><i class="fas fa-phone-alt"></i></div>
+                    <h3>Telefone</h3>
+                    <p><a href="tel:+551239043950">(12) 3904-3950</a></p>
+                    <p><a href="https://wa.me/551239043950" target="_blank" rel="noopener">WhatsApp: (12) 3904-3950</a></p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>E-mail</h3>
+                    <p><a href="mailto:admin@inhergarage.com">admin@inhergarage.com</a></p>
+                    <p style="font-size:0.85rem;color:#6B7A70;margin-top:0.5rem;">Respondemos em até 24h úteis</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Rodapé -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4>Mr Carvalho</h4>
+                <p>Importadora de móveis e objetos de arte desde 2025. Sofisticação e design em Jacareí/SP.</p>
+            </div>
+            <div>
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#" onclick="openModal('privacidade');return false;">Política de Privacidade</a></li>
+                    <li><a href="#" onclick="openModal('lgpd');return false;">Política de LGPD</a></li>
+                    <li><a href="#" onclick="openModal('reembolso');return false;">Troca e Reembolso</a></li>
+                    <li><a href="#" onclick="openModal('termos');return false;">Termos de Uso</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Dados da Empresa</h4>
+                <p><strong>Razão Social:</strong> Mr Carvalho Importadora de Moveis LTDA</p>
+                <p><strong>CNPJ:</strong> 60.773.962/0001-05</p>
+                <p><strong>Fundação:</strong> 12/05/2025</p>
+                <p><strong>Atividade:</strong> 47.89-0-03</p>
+                <p><strong>Situação:</strong> Ativa</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 Mr Carvalho Importadora de Moveis LTDA — CNPJ 60.773.962/0001-05. Todos os direitos reservados.
+        </div>
+    </div>
+</footer>
+
+<!-- WhatsApp flutuante -->
+<a href="https://wa.me/551239043950" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Falar no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Cookie banner -->
+<div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-inner">
+        <p>Este site utiliza cookies para melhorar sua experiência. Ao clicar em "Aceitar", você concorda com nossa <a href="#" onclick="openModal('privacidade');return false;" style="color:#E0B84C;">Política de Privacidade</a>.</p>
+        <div class="cookie-btns">
+            <button class="cookie-accept" onclick="cookieChoice('accept')">Aceitar</button>
+            <button class="cookie-reject" onclick="cookieChoice('reject')">Recusar</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()" aria-label="Fechar"><i class="fas fa-times"></i></button>
+        <div id="modalBody"></div>
+    </div>
+</div>
+
+<script>
+    // Menu mobile
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+    // FAQ
+    document.querySelectorAll('.faq-q').forEach(q => {
+        q.addEventListener('click', () => q.parentElement.classList.toggle('active'));
+    });
+
+    // Cookie
+    const cookieBanner = document.getElementById('cookieBanner');
+    if (!localStorage.getItem('cookieChoice')) {
+        cookieBanner.classList.add('show');
+    }
+    function cookieChoice(choice) {
+        localStorage.setItem('cookieChoice', choice);
+        cookieBanner.classList.remove('show');
+    }
+
+    // Modal de políticas
+    const modal = document.getElementById('modal');
+    const modalBody = document.getElementById('modalBody');
+
+    const policies = {
+        privacidade: {
+            title: 'Política de Privacidade',
+            body: `
+                <p><strong>Última atualização:</strong> Outubro de 2026</p>
+                <p>A <strong>Mr Carvalho Importadora de Moveis LTDA</strong> (CNPJ 60.773.962/0001-05) valoriza sua privacidade.</p>
+                <h3>1. Dados Coletados</h3>
+                <p>Coletamos apenas os dados que você fornece voluntariamente pelo formulário de contato: nome, e-mail, telefone, interesse e mensagem.</p>
+                <h3>2. Finalidade</h3>
+                <p>Os dados são utilizados exclusivamente para responder à sua solicitação de orçamento, tirar dúvidas e prestar atendimento comercial.</p>
+                <h3>3. Compartilhamento</h3>
+                <p>Não compartilhamos seus dados com terceiros, exceto quando necessário para processar pagamentos ou realizar entregas, sempre com seu conhecimento.</p>
+                <h3>4. Retenção</h3>
+                <p>Os dados são mantidos pelo tempo necessário ao atendimento e cumprimento de obrigações legais.</p>
+                <h3>5. Seus Direitos</h3>
+                <p>Você pode solicitar acesso, correção ou exclusão dos seus dados pelo e-mail <a href="mailto:admin@inhergarage.com">admin@inhergarage.com</a>.</p>
+                <h3>6. Cookies</h3>
+                <p>Utilizamos cookies essenciais para o funcionamento do site e, com seu consentimento, cookies de análise.</p>
+                <div class="pending">[PREENCHER: substituir este texto por política revisada juridicamente]</div>
+            `
+        },
+        lgpd: {
+            title: 'Política de LGPD',
+            body: `
+                <p><strong>Última atualização:</strong> Outubro de 2026</p>
+                <p>Em conformidade com a <strong>Lei Geral de Proteção de Dados (Lei nº 13.709/2018)</strong>.</p>
+                <h3>Controlador</h3>
+                <p>Mr Carvalho Importadora de Moveis LTDA — CNPJ 60.773.962/0001-05</p>
+                <h3>Encarregado (DPO)</h3>
+                <p>E-mail: <a href="mailto:admin@inhergarage.com">admin@inhergarage.com</a></p>
+                <h3>Direitos do Titular</h3>
+                <ul>
+                    <li>Confirmação da existência de tratamento</li>
+                    <li>Acesso aos dados</li>
+                    <li>Correção de dados incompletos ou desatualizados</li>
+                    <li>Eliminação de dados pessoais</li>
+                    <li>Revogação do consentimento</li>
+                </ul>
+                <div class="pending">[PREENCHER: substituir este texto por política revisada juridicamente]</div>
+            `
+        },
+        reembolso: {
+            title: 'Política de Troca e Reembolso',
+            body: `
+                <p><strong>Última atualização:</strong> Outubro de 2026</p>
+                <h3>Direito de Arrependimento</h3>
+                <p>Conforme o Art. 49 do Código de Defesa do Consumidor, o cliente tem até 7 dias corridos após o recebimento para desistir da compra, com reembolso integral.</p>
+                <h3>Produtos com Defeito</h3>
+                <p>Prazo de 30 dias para produtos não duráveis e 90 dias para duráveis, conforme Art. 26 do CDC.</p>
+                <h3>Como Solicitar</h3>
+                <p>E-mail: <a href="mailto:admin@inhergarage.com">admin@inhergarage.com</a> ou WhatsApp (12) 3904-3950.</p>
+                <div class="pending">[PREENCHER: adaptar às condições comerciais reais]</div>
+            `
+        },
+        termos: {
+            title: 'Termos de Uso',
+            body: `
+                <p><strong>Última atualização:</strong> Outubro de 2026</p>
+                <p>Ao utilizar este site, você concorda com os termos abaixo.</p>
+                <h3>1. Uso do Site</h3>
+                <p>Este site é destinado à apresentação dos produtos e serviços da Mr Carvalho Importadora de Moveis LTDA e ao contato comercial.</p>
+                <h3>2. Propriedade Intelectual</h3>
+                <p>Todos os conteúdos, marcas e imagens são de propriedade da empresa ou de seus fornecedores.</p>
+                <h3>3. Responsabilidades</h3>
+                <p>As informações são fornecidas de boa-fé. Preços e disponibilidade podem variar sem aviso prévio.</p>
+                <div class="pending">[PREENCHER: substituir por termos revisados juridicamente]</div>
+            `
+        }
+    };
+
+    function openModal(key) {
+        const p = policies[key];
+        if (!p) return;
+        modalBody.innerHTML = `<h2>${p.title}</h2>${p.body}`;
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+    modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+
+    // Formulário
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const nome = document.getElementById('nome').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const telefone = document.getElementById('telefone').value.trim();
+        const interesse = document.getElementById('interesse').value;
+        const consent = document.getElementById('consent').checked;
+
+        if (!nome || !email || !telefone || !interesse || !consent) {
+            alert('Por favor, preencha todos os campos obrigatórios e aceite a Política de Privacidade.');
+            return;
+        }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            alert('Por favor, insira um e-mail válido.');
+            return;
+        }
+
+        // IMPORTANTE: Aqui você precisa conectar a um backend real.
+        alert('Formulário validado. ATENÇÃO: para o envio funcionar de verdade, é preciso conectar a um serviço como Formspree ou EmailJS.\n\nEnquanto isso, os dados NÃO estão sendo enviados.');
+    });
+</script>
+
+</body>
+</html>
